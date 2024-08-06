@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Return</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="grid-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img class="sidebar-logo" src="HP_Blue_RGB_150_MD 2.png" alt="Logo">
+                <div class="sidebar-title">HPSC IMS</div>
+            </div>
+            <div class="sidebar-profile">
+                <img class="profile-icon" src="user_icon.png" alt="Profile">
+                <div class="profile-username">Juan Delacruz</div>
+                <div class="profile-role">Admin</div>
+            </div>
+            <div class="options">
+                <button class="dashboard" onclick="location.href='admin_dashboard.html'">
+                    <img class="icons" src="dashboard_icon.png" alt="Dashboard">
+                    <div class="option-title">Dashboard</div>
+                </button>
+                <button class="parts" onclick="location.href='admin_parts.html'">
+                    <img class="icons" src="parts_icon_w.png" alt="Parts">
+                    <div class="option-title">Inventory Parts</div>
+                </button>
+                <button class="requests" onclick="location.href='admin_request.html'">
+                    <img class="icons" src="request_icon_w.png" alt="Requests">
+                    <div class="option-title">Requests</div>
+                </button>
+                <button class="release" onclick="location.href='admin_release.html'">
+                    <img class="icons" src="release_icon_w.png" alt="Settings">
+                    <div class="option-title">Release</div>
+                </button>
+                <button class="returns" onclick="location.href='admin_return.html'">
+                    <img class="icons" src="return_icon.png" alt="Return">
+                    <div class="option-title">Returns</div>
+                </button>
+                <button class="missing" onclick="location.href='admin_pending.html'">
+                    <img class="icons" src="missing_icon_w.png" alt="Return">
+                    <div class="option-title">Pending Parts</div>
+                </button>
+            </div>
+        </aside>
+        <div class="header">
+            <div class="main-title">RETURNED PARTS</div>
+        </div>
+        <div class="search">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <img class="search-icon" src="search_icon.png" alt="Search">
+                    <input id="searchInput" class="input-text" placeholder="Search" onkeyup="searchTable()">
+                </div>
+            </div>
+        </div>
+        <main class="main-container">
+            <div class="ret-table">
+                <table id="inventoryTable">
+                    <thead>
+                        <tr>
+                            <th>PART NO.</th>
+                            <th>DESCRIPTION</th>
+                            <th>COMMODITY</th>
+                            <th>RET. QTY.</th>
+                            <th>LOCATION</th>
+                            <th>RET. BY.</th>
+                            <th>RET. DATE</th>
+                            <th>SELECT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>5116372540</td>
+                            <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
+                            <td>Battery</td>
+                            <td>1</td>
+                            <td>MAKATI</td>
+                            <td>tris</td>
+                            <td>08/01/2024</td>
+                            <td><input type="checkbox" class="item-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5116372540</td>
+                            <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
+                            <td>Battery</td>
+                            <td>1</td>
+                            <td>MAKATI</td>
+                            <td>tris</td>
+                            <td>08/01/2024</td>
+                            <td><input type="checkbox" class="item-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5116372540</td>
+                            <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
+                            <td>Battery</td>
+                            <td>1</td>
+                            <td>MAKATI</td>
+                            <td>tris</td>
+                            <td>08/01/2024</td>
+                            <td><input type="checkbox" class="item-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5116372540</td>
+                            <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
+                            <td>Battery</td>
+                            <td>1</td>
+                            <td>MAKATI</td>
+                            <td>tris</td>
+                            <td>08/01/2024</td>
+                            <td><input type="checkbox" class="item-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5116372540</td>
+                            <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
+                            <td>Battery</td>
+                            <td>1</td>
+                            <td>MAKATI</td>
+                            <td>tris</td>
+                            <td>08/01/2024</td>
+                            <td><input type="checkbox" class="item-checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td>5116372540</td>
+                            <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
+                            <td>Battery</td>
+                            <td>1</td>
+                            <td>MAKATI</td>
+                            <td>tris</td>
+                            <td>08/01/2024</td>
+                            <td><input type="checkbox" class="item-checkbox"></td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+            <div class="actions">
+                <button class="accept-btn">Acknowledge</button>
+                <button class="select-btn" onclick="selectAllCheckboxes(true)">Select All</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
