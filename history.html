@@ -1,69 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>History</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="grid-container">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <img class="sidebar-logo" src="HP_Blue_RGB_150_MD 2.png" alt="Logo">
-                <div class="sidebar-title">HPSC IMS</div>
-            </div>
-    
-            <div class="sidebar-profile">
-                <img class="profile-icon" src="user_icon.png" alt="Profile">
-                <div class="profile-username">Juan Delacruz</div>
-                <div class="profile-role">Admin</div>
-            </div>
-    
-            <div class="options">
-                <button class="dashboard" onclick="location.href='admin_dashboard.html'">
-                    <img class="icons" src="dashboard_icon.png" alt="Dashboard">
-                    <div class="option-title">Dashboard</div>
-                </button>
-                <button class="parts" onclick="location.href='admin_parts.html'">
-                    <img class="icons" src="parts_icon_w.png" alt="Parts">
-                    <div class="option-title">Inventory Parts</div>
-                </button>
-                <button class="requests" onclick="location.href='admin_request.html'">
-                    <img class="icons" src="request_icon_w.png" alt="Requests">
-                    <div class="option-title">Requests</div>
-                </button>
-                <button class="release" onclick="location.href='admin_release.html'">
-                    <img class="icons" src="release_icon_w.png" alt="Settings">
-                    <div class="option-title">Release</div>
-                </button>
-                <button class="returns" onclick="location.href='admin_return.html'">
-                    <img class="icons" src="return_icon.png" alt="Return">
-                    <div class="option-title">Returns</div>
-                </button>
-                <button class="missing" onclick="location.href='admin_pending.html'">
-                    <img class="icons" src="missing_icon_w.png" alt="Return">
-                    <div class="option-title">Pending Parts</div>
-                </button>
-            </div>
-        </aside>
-
-        <div class="header">
-            <div class="main-title">HISTORY</div>
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img class="sidebar-logo" src="HP_Blue_RGB_150_MD 2.png" alt="Logo" />
+          <div class="sidebar-title">HPSC IMS</div>
         </div>
 
-        <main class="main-container">
-            <div class="history-card">
-                <p><strong>Part Name:</strong> <span id="partName">Loading...</span></p>
-                <p><strong>Part Number:</strong> <span id="partNumber">Loading...</span></p>
-                <ul>
-                    <!-- Example log entries -->
-                    <li>2024-01-15: Received 50 units from Supplier X.</li>
-                    <!-- More entries as needed -->
-                </ul>
-            </div>
-        </main>
+        <div class="sidebar-profile">
+          <img class="profile-icon" src="user_icon.png" alt="Profile" />
+          <div class="profile-username">Juan Delacruz</div>
+          <div class="profile-role">Admin</div>
+        </div>
+
+        <div class="options">
+          <button
+            class="dashboard"
+            onclick="location.href='admin_dashboard.html'"
+          >
+            <img class="icons" src="dashboard_icon.png" alt="Dashboard" />
+            <div class="option-title">Dashboard</div>
+          </button>
+          <button class="parts" onclick="location.href='admin_parts.html'">
+            <img class="icons" src="parts_icon_w.png" alt="Parts" />
+            <div class="option-title">Inventory Parts</div>
+          </button>
+          <button class="requests" onclick="location.href='admin_request.html'">
+            <img class="icons" src="request_icon_w.png" alt="Requests" />
+            <div class="option-title">Requests</div>
+          </button>
+          <button class="release" onclick="location.href='admin_release.html'">
+            <img class="icons" src="release_icon_w.png" alt="Settings" />
+            <div class="option-title">Release</div>
+          </button>
+          <button class="returns" onclick="location.href='admin_return.html'">
+            <img class="icons" src="return_icon.png" alt="Return" />
+            <div class="option-title">Returns</div>
+          </button>
+          <button class="missing" onclick="location.href='admin_pending.html'">
+            <img class="icons" src="missing_icon_w.png" alt="Return" />
+            <div class="option-title">Pending Parts</div>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-container">
+        <div class="header">
+          <div class="main-title">HISTORY</div>
+        </div>
+        <div class="history-card">
+          <p>
+            <strong>Part Name:</strong> <span id="partName">Loading...</span>
+          </p>
+          <p>
+            <strong>Part Number:</strong>
+            <span id="partNumber">Loading...</span>
+          </p>
+          <ul>
+            <!-- Example log entries -->
+            <li>2024-01-15: Received 50 units from Supplier X.</li>
+            <!-- More entries as needed -->
+          </ul>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
