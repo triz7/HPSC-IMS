@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Request Form</title>
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="grid-container">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <img class="sidebar-logo" src="HP_Blue_RGB_150_MD 2.png" alt="Logo">
-                <div class="sidebar-title">HPSC IMS</div>
-            </div>
-
-            <div class="sidebar-profile">
-                <img class="profile-icon" src="user_icon.png" alt="Profile">
-                <div class="profile-username">Juan Delacruz</div>
-                <div class="profile-role">User</div>
-            </div>
-
-            <div class="options">
-                <button class="parts" onclick="location.href='user_inventory.html'">
-                    <img class="icons" src="parts_icon_w.png" alt="Parts">
-                    <div class="option-title">Inventory Parts</div>
-                </button>
-            </div>
-        </aside>
-
-        <div class="header">
-            <div class="main-title">REQUEST FORM</div>
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img class="sidebar-logo" src="HP_Blue_RGB_150_MD 2.png" alt="Logo" />
+          <div class="sidebar-title">HPSC IMS</div>
         </div>
 
-        <main class="main-container">
-            <div class="req-form">
-                <table>
-                    <form onsubmit="showSuccessMessage(event)">
-                        <div class="req-form-group">
-                            <label for="part-number">Part Number(s):</label>
-                            <textarea id="part-number" name="part-number" rows="3" readonly></textarea>
-                        </div>
-                        <div class="req-form-group">
-                            <label for="part-description">Description:</label>
-                            <textarea id="part-description" name="part-description" rows="6" readonly></textarea>
-                        </div>
-                        <div class="req-form-group">
-                            <label for="quantity">Quantity:</label>
-                            <input type="number" id="quantity" name="quantity" required>
-                        </div>
-                        <div class="req-form-group">
-                            <label for="location">Location:</label>
-                            <input type="text" id="location" name="location" required>
-                        </div>
-                        <div class="req-form-group">
-                            <label for="notes">Additional Notes:</label>
-                            <textarea id="notes" name="notes" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="confirm-button">CONFIRM REQUEST</button>
-                    </form>
-                </table>
-            </div>
-        </main>
+        <div class="sidebar-profile">
+          <img class="profile-icon" src="user_icon.png" alt="Profile" />
+          <div class="profile-username">Juan Delacruz</div>
+          <div class="profile-role">User</div>
+        </div>
+
+        <div class="options">
+          <button class="parts" onclick="location.href='user_inventory.html'">
+            <img class="icons" src="parts_icon_w.png" alt="Parts" />
+            <div class="option-title">Inventory Parts</div>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-container">
+        <div class="header">
+          <div class="main-title">REQUEST FORM</div>
+        </div>
+        <div class="req-form">
+          <table>
+            <form onsubmit="showSuccessMessage(event)">
+              <div class="req-form-group">
+                <label for="part-number">Part Number(s):</label>
+                <textarea
+                  id="part-number"
+                  name="part-number"
+                  rows="3"
+                  readonly
+                ></textarea>
+              </div>
+              <div class="req-form-group">
+                <label for="part-description">Description:</label>
+                <textarea
+                  id="part-description"
+                  name="part-description"
+                  rows="6"
+                  readonly
+                ></textarea>
+              </div>
+              <div class="req-form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required />
+              </div>
+              <div class="req-form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required />
+              </div>
+              <div class="req-form-group">
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+              </div>
+              <button type="submit" class="confirm-button">
+                CONFIRM REQUEST
+              </button>
+            </form>
+          </table>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
