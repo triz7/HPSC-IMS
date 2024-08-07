@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>User Management</title>
-    <script src="script.js" defer></script>
+    <script type="module" src="functions_script.js" defer></script>
   </head>
   <body>
     <div class="grid-container">
@@ -28,7 +29,7 @@
             <img class="icons" src="dashboard_icon.png" alt="Dashboard" />
             <div class="option-title">Dashboard</div>
           </button>
-          <button class="parts">
+          <button class="parts" onclick="location.href='admin_parts.html'">
             <img class="icons" src="parts_icon_w.png" alt="Parts" />
             <div class="option-title">Inventory Parts</div>
           </button>
@@ -45,14 +46,18 @@
             <div class="option-title">Returns</div>
           </button>
           <button class="missing" onclick="location.href='admin_pending.html'">
-            <img class="icons" src="missing_icon_w.png" alt="Return" />
+            <img class="icons" src="missing_icon_w.png" alt="Pending" />
             <div class="option-title">Pending Parts</div>
           </button>
           <button
             class="usman"
             onclick="location.href='supadmin_usermanagement.html'"
           >
-            <img class="icons" src="user_management_icon.png" alt="UsMan" />
+            <img
+              class="icons"
+              src="user_management_icon.png"
+              alt="User Management"
+            />
             <div class="option-title">User</div>
           </button>
         </div>
@@ -60,7 +65,7 @@
 
       <main class="main-container">
         <div class="header">
-          <div class="main-title">USER MANANGEMENT</div>
+          <div class="main-title">USER MANAGEMENT</div>
         </div>
 
         <div class="search">
@@ -76,6 +81,7 @@
             </div>
           </div>
         </div>
+
         <div class="part-table">
           <table id="inventoryTable">
             <thead>
@@ -87,113 +93,12 @@
                 <th>ACTIONS</th>
               </tr>
             </thead>
-
             <tbody>
-              <tr>
-                <td>ava.miller@example.com</td>
-                <td>Ava Miller</td>
-                <td>User</td>
-                <td></td>
-                <td>
-                  <div class="cl-actions">
-                    <button
-                      class="modify-btn"
-                      onclick="redirectToModifyUserPage()"
-                    >
-                      Modify
-                    </button>
-                    <button class="delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>ava.miller@example.com</td>
-                <td>Joel</td>
-                <td>User</td>
-                <td></td>
-                <td>
-                  <div class="cl-actions">
-                    <button
-                      class="modify-btn"
-                      onclick="redirectToModifyUserPage()"
-                    >
-                      Modify
-                    </button>
-                    <button class="delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>ava.miller@example.com</td>
-                <td>Von</td>
-                <td>User</td>
-                <td></td>
-                <td>
-                  <div class="cl-actions">
-                    <button
-                      class="modify-btn"
-                      onclick="redirectToModifyUserPage()"
-                    >
-                      Modify
-                    </button>
-                    <button class="delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>ava.miller@example.com</td>
-                <td>Dominic</td>
-                <td>User</td>
-                <td></td>
-                <td>
-                  <div class="cl-actions">
-                    <button
-                      class="modify-btn"
-                      onclick="redirectToModifyUserPage()"
-                    >
-                      Modify
-                    </button>
-                    <button class="delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>ava.miller@example.com</td>
-                <td>Ava Miller</td>
-                <td>User</td>
-                <td></td>
-                <td>
-                  <div class="cl-actions">
-                    <button
-                      class="modify-btn"
-                      onclick="redirectToModifyUserPage()"
-                    >
-                      Modify
-                    </button>
-                    <button class="delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>ava.miller@example.com</td>
-                <td>Ava Miller</td>
-                <td>User</td>
-                <td></td>
-                <td>
-                  <div class="cl-actions">
-                    <button
-                      class="modify-btn"
-                      onclick="redirectToModifyUserPage()"
-                    >
-                      Modify
-                    </button>
-                    <button class="delete-btn">Delete</button>
-                  </div>
-                </td>
-              </tr>
+              <!-- Rows will be dynamically populated by JavaScript -->
             </tbody>
           </table>
         </div>
+
         <div class="actions">
           <button class="add-btn" onclick="redirectToAddUserPage()">
             Add User

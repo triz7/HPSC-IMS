@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Parts</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-    <script src="script.js" defer></script>
+    <script type="module" src="addPartFunction.js" defer></script>
   </head>
   <body>
     <div class="grid-container">
@@ -25,44 +25,29 @@
         <div class="options">
           <button
             class="dashboard"
-            onclick="navigateToPage('admin_dashboard.html', this)"
+            onclick="location.href='supadmin_dashboard.html'"
           >
             <img class="icons" src="dashboard_icon.png" alt="Dashboard" />
             <div class="option-title">Dashboard</div>
           </button>
-          <button
-            class="parts"
-            onclick="navigateToPage('admin_parts.html', this)"
-          >
+          <button class="parts" onclick="location.href='admin_parts.html'">
             <img class="icons" src="parts_icon_w.png" alt="Parts" />
             <div class="option-title">Inventory Parts</div>
           </button>
-          <button
-            class="requests"
-            onclick="navigateToPage('admin_request.html', this)"
-          >
+          <button class="requests" onclick="location.href='admin_request.html'">
             <img class="icons" src="request_icon_w.png" alt="Requests" />
             <div class="option-title">Requests</div>
           </button>
-          <button
-            class="release"
-            onclick="navigateToPage('admin_release.html', this)"
-          >
+          <button class="release" onclick="location.href='admin_release.html'">
             <img class="icons" src="release_icon_w.png" alt="Settings" />
             <div class="option-title">Release</div>
           </button>
-          <button
-            class="returns"
-            onclick="navigateToPage('admin_return.html', this)"
-          >
+          <button class="returns" onclick="location.href='admin_return.html'">
             <img class="icons" src="return_icon.png" alt="Return" />
             <div class="option-title">Returns</div>
           </button>
-          <button
-            class="missing"
-            onclick="navigateToPage('admin_pending.html', this)"
-          >
-            <img class="icons" src="missing_icon_w.png" alt="Return" />
+          <button class="missing" onclick="location.href='admin_pending.html'">
+            <img class="icons" src="missing_icon_w.png" alt="Pending" />
             <div class="option-title">Pending Parts</div>
           </button>
         </div>
@@ -99,205 +84,8 @@
                 <th>ACTIONS</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>5116372540</td>
-                <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
-                <td>Battery</td>
-                <td>1</td>
-                <td>MAKATI</td>
-                <td>
-                  <div class="dropdown">
-                    <button class="dropbtn">PENDING</button>
-                    <div class="dropdown-content">
-                      <a href="#" onclick="updateButtonText(this, '#28A745')"
-                        >COMPLETED</a
-                      >
-                      <a href="#" onclick="updateButtonText(this, '#DC3545')"
-                        >PENDING</a
-                      >
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="cl-actions">
-                    <button class="modify-btn" onclick="redirectToModifyPage()">
-                      Modify
-                    </button>
-                    <button
-                      class="history-btn"
-                      onclick="redirectToHistoryPage()"
-                    >
-                      History
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>5116372540</td>
-                <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
-                <td>Battery</td>
-                <td>1</td>
-                <td>MAKATI</td>
-                <td>
-                  <div class="dropdown">
-                    <button class="dropbtn">PENDING</button>
-                    <div class="dropdown-content">
-                      <a href="#" onclick="updateButtonText(this, '#28A745')"
-                        >COMPLETED</a
-                      >
-                      <a href="#" onclick="updateButtonText(this, '#DC3545')"
-                        >PENDING</a
-                      >
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="cl-actions">
-                    <button class="modify-btn" onclick="redirectToModifyPage()">
-                      Modify
-                    </button>
-                    <button
-                      class="history-btn"
-                      onclick="redirectToHistoryPage()"
-                    >
-                      History
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>5116372540</td>
-                <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
-                <td>LCD</td>
-                <td>1</td>
-                <td>MAKATI</td>
-                <td>
-                  <div class="dropdown">
-                    <button class="dropbtn">PENDING</button>
-                    <div class="dropdown-content">
-                      <a href="#" onclick="updateButtonText(this, '#28A745')"
-                        >COMPLETED</a
-                      >
-                      <a href="#" onclick="updateButtonText(this, '#DC3545')"
-                        >PENDING</a
-                      >
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="cl-actions">
-                    <button class="modify-btn" onclick="redirectToModifyPage()">
-                      Modify
-                    </button>
-                    <button
-                      class="history-btn"
-                      onclick="redirectToHistoryPage()"
-                    >
-                      History
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>5116372540</td>
-                <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
-                <td>Battery</td>
-                <td>1</td>
-                <td>MAKATI</td>
-                <td>
-                  <div class="dropdown">
-                    <button class="dropbtn">PENDING</button>
-                    <div class="dropdown-content">
-                      <a href="#" onclick="updateButtonText(this, '#28A745')"
-                        >COMPLETED</a
-                      >
-                      <a href="#" onclick="updateButtonText(this, '#DC3545')"
-                        >PENDING</a
-                      >
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="cl-actions">
-                    <button class="modify-btn" onclick="redirectToModifyPage()">
-                      Modify
-                    </button>
-                    <button
-                      class="history-btn"
-                      onclick="redirectToHistoryPage()"
-                    >
-                      History
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>5116372540</td>
-                <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
-                <td>Battery</td>
-                <td>1</td>
-                <td>MAKATI</td>
-                <td>
-                  <div class="dropdown">
-                    <button class="dropbtn">PENDING</button>
-                    <div class="dropdown-content">
-                      <a href="#" onclick="updateButtonText(this, '#28A745')"
-                        >COMPLETED</a
-                      >
-                      <a href="#" onclick="updateButtonText(this, '#DC3545')"
-                        >PENDING</a
-                      >
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="cl-actions">
-                    <button class="modify-btn" onclick="redirectToModifyPage()">
-                      Modify
-                    </button>
-                    <button
-                      class="history-btn"
-                      onclick="redirectToHistoryPage()"
-                    >
-                      History
-                    </button>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>5116372540</td>
-                <td>SKO-BATT 6C83Wh 3.59Ah LI WK06083XL-PL</td>
-                <td>Battery</td>
-                <td>1</td>
-                <td>MAKATI</td>
-                <td>
-                  <div class="dropdown">
-                    <button class="dropbtn">PENDING</button>
-                    <div class="dropdown-content">
-                      <a href="#" onclick="updateButtonText(this, '#28A745')"
-                        >COMPLETED</a
-                      >
-                      <a href="#" onclick="updateButtonText(this, '#DC3545')"
-                        >PENDING</a
-                      >
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="cl-actions">
-                    <button class="modify-btn" onclick="redirectToModifyPage()">
-                      Modify
-                    </button>
-                    <button
-                      class="history-btn"
-                      onclick="redirectToHistoryPage()"
-                    >
-                      History
-                    </button>
-                  </div>
-                </td>
-              </tr>
+            <tbody id="inventoryTableBody">
+              <!-- Rows will be added here dynamically -->
             </tbody>
           </table>
         </div>

@@ -733,6 +733,8 @@ td {
 .req-form-group input[type="number"],
 .req-form-group input[type="text"],
 .req-form-group input[type="varchar"],
+.req-form-group input[type="password"],
+.req-form-group input[id="cpassword"],
 .req-form-group select {
   width: 100%;
   padding: 15px;

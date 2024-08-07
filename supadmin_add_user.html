@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Add User</title>
-    <script src="script.js" defer></script>
+    <script type="module" src="functions_script.js" defer></script>
   </head>
   <body>
     <div class="grid-container">
@@ -14,13 +14,11 @@
           <img class="sidebar-logo" src="HP_Blue_RGB_150_MD 2.png" alt="Logo" />
           <div class="sidebar-title">HPSC IMS</div>
         </div>
-
         <div class="sidebar-profile">
           <img class="profile-icon" src="user_icon.png" alt="Profile" />
           <div class="profile-username">Juan Delacruz</div>
           <div class="profile-role">Admin</div>
         </div>
-
         <div class="options">
           <button
             class="dashboard"
@@ -58,20 +56,37 @@
           </button>
         </div>
       </aside>
-
       <main class="main-container">
         <div class="header">
           <div class="main-title">ADD USER</div>
         </div>
         <div class="add-user-form">
-          <form onsubmit="showSuccessMessage(event)">
+          <form id="addUserForm">
             <div class="req-form-group">
               <label for="email">Email:</label>
-              <input type="varchar" id="email" name="email" required />
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="req-form-group">
               <label for="username">Username:</label>
               <input type="text" id="username" name="username" required />
+            </div>
+            <div class="req-form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+              <input
+                type="checkbox"
+                id="showPassword"
+                onclick="togglePassword('password', 'showPassword')"
+              />Show Password
+            </div>
+            <div class="req-form-group">
+              <label for="cpassword">Confirm Password:</label>
+              <input type="password" id="cpassword" name="cpassword" required />
+              <input
+                type="checkbox"
+                id="showCPassword"
+                onclick="togglePassword('cpassword', 'showCPassword')"
+              />Show Password
             </div>
             <div class="req-form-group">
               <label for="user-role">User Role:</label>
